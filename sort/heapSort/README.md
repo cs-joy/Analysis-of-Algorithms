@@ -1,1 +1,1 @@
-![img](https://en.wikipedia.org/wiki/Heapsort#/media/File:Heapsort-example.gif)
+![img](https://github.com/cs-joy/Analysis-of-Algorithms/blob/main/sort/heapSort/Heapsort-example.gif)
