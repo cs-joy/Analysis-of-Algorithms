@@ -1,3 +1,13 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int myArr[] = { 1, 12, 9, 5, 6, 10 };
+    int size_of_myArr = sizeof(myArr) / sizeof(myArr[0]);
+    return(0);
+}
 
 // Heapsort can be thought of as an improved selection sort
 

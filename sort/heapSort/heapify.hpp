@@ -32,3 +32,24 @@ namespace Heapifying
         }
     }
 }
+
+namespace buildHeap
+{
+    // main function to do heap sort
+    void heapSort(int arr[], int n)
+    {
+        // build max heap
+        for(int i = n/2-1; i>=0; i--)
+        {
+            Heapifying::heapify(arr, n, i);
+        }
+
+        // heap sort
+        for(int i = n-1; i>=0; i--)
+        {
+            swap(&arr[0], &arr[i]);
+            //Heapify root element to get higher element at root again
+            Heapifying::heapify(arr, i, 0);
+        }
+    }
+}
