@@ -22,13 +22,13 @@ namespace Heapifying
         if (rightChild < n && arr[rightChild] > arr[largest])
         {
             largest = rightChild;
+        }
 
-            // Swap and continue heapifying if the root is not largest
-            if (largest != i)
-            {
-                swap(&arr[i], &arr[largest]);
-                heapify(arr, n, largest);
-            }
+        // Swap and continue heapifying if the root is not largest
+        if (largest != i)
+        {
+            swap(&arr[i], &arr[largest]);
+            heapify(arr, n, largest);
         }
     }
 }

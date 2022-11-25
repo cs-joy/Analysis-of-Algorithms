@@ -1,11 +1,21 @@
 #include<iostream>
+#include "heapify.hpp"
+#include "disNamespace.hpp"
 
 using namespace std;
+using namespace buildHeap;
 
 int main()
 {
     int myArr[] = { 1, 12, 9, 5, 6, 10 };
     int size_of_myArr = sizeof(myArr) / sizeof(myArr[0]);
+    cout << "Unsorted array is: ";
+    println::display(myArr, size_of_myArr);
+
+    heapSort(myArr, size_of_myArr);
+    cout << "Sorted array is: ";
+    println::display(myArr, size_of_myArr);
+
     return(0);
 }
 
