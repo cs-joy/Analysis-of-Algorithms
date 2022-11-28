@@ -3,6 +3,9 @@
 #include "swapSpace.hpp"
 #include "partitionPoint.hpp"
 
+#include <heapSort/heapify.hpp>
+using namespace buildHeap;
+
 using namespace findMedian;
 
 namespace IntroSortUtil
@@ -23,8 +26,10 @@ namespace IntroSortUtil
         // if the depth is zero use heapsort
         if(depthLimit == 0)
         {
-            //make_heap(begin, end+1);
-            //sort_heap(begin, end+1);
+            //Heapifying::heapify(arr, begin, end+1);
+            //make_heap(begin, end+1); // need to build this function
+            //sort_heap(begin, end+1); // need to build this function
+            
             return;
         }
 
