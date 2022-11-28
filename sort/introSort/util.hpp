@@ -1,4 +1,9 @@
 #include "insertionSort.hpp"
+#include "medianSpace.hpp"
+#include "swapSpace.hpp"
+#include "partitionPoint.hpp"
+
+using namespace findMedian;
 
 namespace IntroSortUtil
 {
@@ -16,9 +21,24 @@ namespace IntroSortUtil
         }
 
         // if the depth is zero use heapsort
-        if(size == 0)
+        if(depthLimit == 0)
         {
-            //
+            //make_heap(begin, end+1);
+            //sort_heap(begin, end+1);
+            return;
         }
+
+        // else use a median of three concept to find a good pivot
+        int* pivot = MedianOfThree(begin, begin+size/2, end);
+
+        // swap the values pointed by the pointers
+        swapSpace::swap(pivot, end);
+
+        // perform quick sort
+        int* partitionPoint = partition(arr, begin-arr, end-arr);
+        utility(arr, begin, partitionPoint-1, depthLimit-1);
+        utility(arr, partitionPoint+1, end, depthLimit-1);
+
+        return;
     }
 }
