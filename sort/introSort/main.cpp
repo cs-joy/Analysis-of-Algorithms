@@ -13,7 +13,7 @@ void displayResult(int arr[], int n)
     cout << endl;
 }
 
-void swap(int *x, int *y)
+void swaping(int *x, int *y)
 {
     int temp = *x;
     *x = *y;
@@ -94,10 +94,10 @@ int* partition(int arr[], int low, int high)
         {
             // increment index of smaller element
             i++;
-            swap(&arr[i], &arr[j]);
+            swaping(&arr[i], &arr[j]);
         }
     }
-    swap(&arr[i+1], &arr[high]);
+    swaping(&arr[i+1], &arr[high]);
 
     return(arr+i+1);
 }
@@ -128,7 +128,7 @@ void utility(int arr[], int *begin, int *end, int depthLimit)
     int *pivot = MedianOfThree(begin, begin + size / 2, end);
 
     // swap the values pointed by the pointers
-    swap(pivot, end);
+    swaping(pivot, end);
 
     // perform quick sort
     int *partitionPoint = partition(arr, begin - arr, end - arr);
