@@ -36,7 +36,7 @@ namespace IntroSortUtil
         int* pivot = MedianOfThree(begin, begin+size/2, end);
 
         // swap the values pointed by the pointers
-        swapSpace::swap(pivot, end);
+        swapSpace::swapp(pivot, end);
 
         // perform quick sort
         int* partitionPoint = partition(arr, begin-arr, end-arr);

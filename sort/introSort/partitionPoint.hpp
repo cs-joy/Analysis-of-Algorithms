@@ -16,10 +16,10 @@ int* partition(int arr[], int low, int high)
         {
             // increment index of smaller element
             i++;
-            swap(&arr[i], &arr[j]);
+            swapp(&arr[i], &arr[j]);
         }
     }
-    swap(&arr[i+1], &arr[high]);
+    swapp(&arr[i+1], &arr[high]);
 
     return(arr+i+1);
 }
