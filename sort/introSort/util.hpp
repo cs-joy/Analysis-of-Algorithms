@@ -1,12 +1,12 @@
+#include<algorithm>
 #include "insertionSort.hpp"
 #include "medianSpace.hpp"
 #include "swapSpace.hpp"
 #include "partitionPoint.hpp"
 
-#include<algorithm>
-
-using namespace findMedian;
 using namespace std;
+using namespace findMedian;
+using namespace swapSpace;
 
 namespace IntroSortUtil
 {
@@ -36,7 +36,7 @@ namespace IntroSortUtil
         int* pivot = MedianOfThree(begin, begin+size/2, end);
 
         // swap the values pointed by the pointers
-        swapSpace::swapp(pivot, end);
+        swaping(pivot, end);
 
         // perform quick sort
         int* partitionPoint = partition(arr, begin-arr, end-arr);

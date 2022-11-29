@@ -1,6 +1,11 @@
-#include "swapSpace.hpp"
+void swap(int *x, int *y)
+{
+    int temp = *x;
+    *x = *y;
+    *y = temp;
 
-using namespace swapSpace;
+    return;
+}
 
 // function to partition the array and return partition point
 int* partition(int arr[], int low, int high)
@@ -16,10 +21,10 @@ int* partition(int arr[], int low, int high)
         {
             // increment index of smaller element
             i++;
-            swapp(&arr[i], &arr[j]);
+            swap(&arr[i], &arr[j]);
         }
     }
-    swapp(&arr[i+1], &arr[high]);
+    swap(&arr[i+1], &arr[high]);
 
     return(arr+i+1);
 }

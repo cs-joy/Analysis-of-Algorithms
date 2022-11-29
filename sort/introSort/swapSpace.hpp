@@ -1,8 +1,6 @@
-
-
 namespace swapSpace
 {
-    void swapp(int* x, int* y)
+    void swaping(int* x, int* y)
     {
         int temp = *x;
         *x = *y;

@@ -1,5 +1,3 @@
-
-
 namespace findMedian
 {
     // a function that find the middle of the values pointed by the pointers x, y, z and return the pointer
@@ -34,5 +32,7 @@ namespace findMedian
         {
             return(y);
         }
+
+        return 0;
     }
 }
