@@ -1,5 +1,6 @@
 #include<iostream>
 //#include<cmath>
+#include<vector>
 
 using namespace std;
 
@@ -16,7 +17,7 @@ void yogurtProblem()
         int K;
         cin >> K;
 
-        int buckets[] = { 0 };
+        vector <int>buckets = new int [N+1];
 
         for(int i=0; i < N; i++)
         {
