@@ -59,7 +59,7 @@ void bucketSort(int arr[])
         current->next = buckets[pos];
         buckets[pos] = current;
     }
-    /*
+    
     // print the buckets along with their elements
     for(i=0; i<NBUCKET; i++)
     {
@@ -67,14 +67,14 @@ void bucketSort(int arr[])
         printBuckets(buckets[i]);
         cout << endl;
     }
-    */
+    
 
     // sort the elements of each bucket
     for(i=0; i<NBUCKET; i++)
     {
         buckets[i] = insertionSort(buckets[i]);
     }
-    /*
+    
     cout << "--------------" << endl;
     cout << "Buckets after sorted" << endl;
     for(i=0; i<NBUCKET; i++)
@@ -83,7 +83,7 @@ void bucketSort(int arr[])
         printBuckets(buckets[i]);
         cout << endl;
     } 
-    */
+    
 
     // put sorted elements on the main array
     for(j=0, i=0; i<NBUCKET; i++)
