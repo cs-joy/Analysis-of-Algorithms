@@ -223,6 +223,31 @@ int main()
     return(0);
 }
 
+/*
+expected output::
+
+Initial Array:
+ 42 32 23 52 25 47 51
+--------------------
+Bucket[0] :
+Bucket[1] :
+Bucket[2] :  25 23
+Bucket[3] :  32
+Bucket[4] :  47 42
+Bucket[5] :  51 52
+--------------
+Buckets after sorted
+Bucket[0] :
+Bucket[1] :
+Bucket[2] :  23 25
+Bucket[3] :  32
+Bucket[4] :  42 47
+Bucket[5] :  51 52
+-------------------
+Sorted Array:
+23 25 32 42 47 51 52
+
+*/
 
 
 // ref:: https://www.geeksforgeeks.org/bucket-sort-2/
