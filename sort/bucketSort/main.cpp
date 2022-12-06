@@ -135,6 +135,7 @@ struct Node *insertionSort(struct Node *list)
             struct Node *tmp;
 
             tmp = k;
+            k = k->next; // semactic error was found here
             tmp->next = nodeList;
             nodeList = tmp;
             continue;
@@ -146,25 +147,30 @@ struct Node *insertionSort(struct Node *list)
             {
                 break;
             }
-
-            if(ptr->next != 0)
-            {
-                struct Node *tmp;
-                tmp = k;
-                k = k->next;
-                tmp->next = ptr->next;
-                ptr->next = tmp;
-                continue;
-            }
-            else
-            {
-                ptr->next = k;
-                k = k->next;
-                ptr->next->next = 0;
-                continue;
-            }
+            /*
+              semantic error was found here
+            */
         }
 
+        /*
+        semantic error was found here
+        */
+        if (ptr->next != 0)
+        {
+            struct Node *tmp;
+            tmp = k;
+            k = k->next;
+            tmp->next = ptr->next;
+            ptr->next = tmp;
+            continue;
+        }
+        else
+        {
+            ptr->next = k;
+            k = k->next;
+            ptr->next->next = 0;
+            continue;
+        }
     }
 
     return nodeList;
@@ -203,7 +209,7 @@ void printBuckets(struct Node *list)
 
 int main() 
 {
-    int myArray[NARRAY] = {42, 32, 33, 52, 37, 47, 51}; //{0.42, 0.32, 0.23, 0.52, 0.25, 0.47, 0.51};
+    int myArray[NARRAY] = {42, 32, 23, 52, 25, 47, 51};
     cout << "Initial Array:" << endl;
     displayArray(myArray);
     cout << "--------------------" << endl;
