@@ -3,10 +3,12 @@
 
 using namespace std;
 
-int jumpSearch(int arr[], int x, int n)
+void jumpSearch(int arr[], int x, int n)
 {
     // find out block size to be jumped
     int step = sqrt(n);
+    bool isFound;
+     int position;
 
     // finding the block where element is present (if it is present)
     int prev = 0;
@@ -17,7 +19,7 @@ int jumpSearch(int arr[], int x, int n)
 
         if(prev >= n)
         {
-            return -1;
+            isFound = false;
         }
     }
 
@@ -29,32 +31,33 @@ int jumpSearch(int arr[], int x, int n)
         // if we reached next block or end of array, element is not present
         if(prev == min(step, n))
         {
-            return -1;
+            isFound = false;
         }
 
         // if element is found
         if(arr[prev] == x)
         {
-            return(prev);
+            isFound = true;
+            position = prev;
         }
     }
 
-    return -1;
+    if(isFound == true) {
+        cout << x << " is found at index " << position << endl;
+    }
+    else
+    {
+        cout << "not found" << endl;
+    }
 }
 
 int main()
 {
     int data[] = { 0, 1, 1, 2, 3, 5, 8, 13, 21,34, 55, 89, 4, 233, 377, 610 };
-    int search = 4;
+    int search =55;
     int size = sizeof(data) / sizeof(data[0]);
     
-    int index = jumpSearch(data, search, size);
-    if(index == -1)
-    {
-        cout << "Number " << search << " is not found!" << endl;
-    } else {
-        cout << "Number " << search <<" is located at index " << index << endl;
-    }
+    jumpSearch(data, search, size);
 
     return 0;
 }
