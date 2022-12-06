@@ -16,8 +16,8 @@ void yogurtProblem()
         int K;
         cin >> K;
 
-        int size = N + 1;
-        int buckets[size];
+        int x = N+1;
+        int buckets[] = new int[N+1];
 
         for(int i=0; i < N; i++)
         {
