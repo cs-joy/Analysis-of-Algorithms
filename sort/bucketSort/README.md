@@ -5,11 +5,9 @@ Bucket sort, or bin sort, is a sorting algorithm that works by distributing the 
 Bucket sort works as follows:
 
 - Set up an array of initially empty "buckets".
-- ##### Scatter: 
-Go over the original array, putting each object in its bucket.
+- Scatter: Go over the original array, putting each object in its bucket.
 - Sort each non-empty bucket.
-- ##### Gather: 
-Visit the buckets in order and put all elements back into the original array.
+- Gather: Visit the buckets in order and put all elements back into the original array.
 
 
 read more to visit [wikipedia](https://en.wikipedia.org/wiki/Bucket_sort)
