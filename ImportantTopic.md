@@ -5,3 +5,5 @@
 - [Algebra](https://en.wikipedia.org/wiki/Algebra)
 
 - [Statistics](https://en.wikipedia.org/wiki/Statistics)
+
+- [Probability](https://en.wikipedia.org/wiki/Probability)
