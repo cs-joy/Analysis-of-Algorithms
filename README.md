@@ -10,3 +10,6 @@ A process or set of rules to be followed in calculations or other problem-solvin
 - [MIT](https://www.youtube.com/watch?v=JPyuH4qXLZ0 'Introduction to Algorithms')
 
 - [Viterbi Algorithm](https://en.wikipedia.org/wiki/Viterbi_algorithm)
+
+# Course
+- [Advanced Algorithms](https://www.youtube.com/watch?v=0JUN9aDxVmI)
