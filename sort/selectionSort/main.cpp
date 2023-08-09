@@ -58,3 +58,4 @@ int main()
 }
 
 // ref :: https://en.wikipedia.org/wiki/Selection_sort
+// sec ref :: class-aub-algorithmcse2418
